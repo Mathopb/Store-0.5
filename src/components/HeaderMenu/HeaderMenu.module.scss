@@ -1,0 +1,36 @@
+header {
+    //background-color: grey;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.menuNav {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    overflow: hidden;
+    padding: auto;
+
+    &Item {
+        float: left;
+    }
+
+    &Linke {
+        display: block;
+        color: blue;
+        text-align: center;
+        text-decoration: none;
+        padding: 1.5rem 0.5rem 0 0.5rem;
+    }
+
+}
+
+.menuLeft {
+    //margin-right: auto;
+}
+
+.menuRight {
+    //margin-left: auto;
+    padding-right: 1rem;
+}

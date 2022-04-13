@@ -1,0 +1,21 @@
+.comidasContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-width: 20rem;
+    justify-self: center;
+    text-align: center;
+}
+
+.foodName {
+padding-bottom: 1rem;
+}
+
+.foodYummy {
+    padding-top: 1rem;
+}
+
+img{
+    height: 20rem;
+    width: 20rem;
+}
