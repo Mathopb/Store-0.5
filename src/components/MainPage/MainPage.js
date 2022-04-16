@@ -1,14 +1,10 @@
-import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import MainShop from "../MainShop/MainShop";
 //import styles from "./MainPage.module.scss";
-import PruebaDB from '../PruebaDB/PruebaDB';
-//import UploadForm from "../UploadForm/UploadForm";
 
 const MainPage = () => {
     return (
         <div>
-            <HeaderMenu />
-            {/* <UploadForm /> */}
-            <PruebaDB />
+            <MainShop />
         </div>
     );
 }

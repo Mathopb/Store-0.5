@@ -1,41 +1,84 @@
-import { Link } from "react-router-dom";
-import styles from "./HeaderMenu.module.scss";
+import { Link, NavLink } from "react-router-dom";
 import {
     HOME,
-    REMERAINFO,
     ADMINUPLOAD
 } from "../../routes/routes";
+import styles from "./HeaderMenu.module.scss";
+//import Logo from '../../assets/images/Logo.png';
 
 const HeaderMenu = () => {
     return (
-        <header>
-            <div className={styles.menuLeft}>
-                <nav>
-                    <ul className={styles.menuNav}>
-                        <li className={styles.menuNavItem}>
-                            <Link to={HOME} className={styles.menuNavLinke}> Home </Link>
-                        </li>
-                        <li className={styles.menuNavItem}>
-                            <Link to={ADMINUPLOAD} className={styles.menuNavLinke}> Upload </Link>
-                        </li>
-                        {/* <li className={styles.menuNavItem}>
-                            <Link to="/" className={styles.menuNavLinke}> About </Link>
-                        </li>
-                        <li className={styles.menuNavItem}>
-                            <Link to="/" className={styles.menuNavLinke}> Contact Me </Link>
-                        </li> */}
-                    </ul>
-                </nav>
-            </div>
+        <header className={styles.container}>
+            <nav className={styles.nav} >
+                <ul className={styles.menuNav}>
+                    <li className={styles.menuNavItem}>
+                        <NavLink
+                            to={HOME}
+                            style={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li className={styles.menuNavItem}>
+                        <NavLink
+                            to={HOME}
+                            style={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            Shop
+                        </NavLink>
+                    </li>
+                    <li className={styles.menuNavItem}>
+                        <NavLink
+                            to={HOME}
+                            style={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            Contact Us
+                        </NavLink>
+                    </li>
+                    <li className={styles.menuNavItem}>
+                        <Link to={ADMINUPLOAD} className={styles.menuNavLinke}> Upload </Link>
+                    </li>
+                </ul>
+            </nav>
 
-            <div className={styles.menuCenter}>
-            <h1>Te cuento el Lore?</h1>
+            <div className={styles.logo}>
+                {/* <img src={Logo} alt="" /> */}
+                {/* Imagen del Logo */}
+                <h1>Store-05</h1>
             </div>
 
             <div className={styles.menuRight}>
-                <h3>Carrito</h3>
+                <ul className={styles.menuRightItems}>
+                    <li className={styles.menuRightItem}>
+                        <NavLink
+                            to={HOME}
+                            style={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            Sign In
+                        </NavLink>
+                    </li>
+                    <li className={styles.menuRightItem}>
+                        <NavLink
+                            to={HOME}
+                            style={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            Create Account
+                        </NavLink>
+                    </li>
+                </ul>
+
             </div>
-        </header>
+        </header >
     );
 }
 

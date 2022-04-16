@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../Firebase/FirebaseConfig';
 import Comidas from '../Comidas/Comidas';
-import styles from "./PruebaDB.module.scss";
+import styles from "./ListaComidas.module.scss";
 
-const PruebaDB = () => {
+const ListaComidas = () => {
 
     const [comidita, setComidita] = useState([]);
 
@@ -18,7 +18,7 @@ const PruebaDB = () => {
                 //console.log(documento.data());
                 comidas.push(documento.data());
             })
-            console.log(comidas);
+            //console.log(comidas);
             setComidita(comidas);
 
         }
@@ -28,7 +28,7 @@ const PruebaDB = () => {
     }, []);
 
     if (comidita.length === 0) {
-        return (<div>Cargando</div>)
+        return (<div className={styles.loading}>Cargando</div>)
     }
 
     return (
@@ -52,4 +52,4 @@ const PruebaDB = () => {
     );
 }
 
-export default PruebaDB;
+export default ListaComidas;

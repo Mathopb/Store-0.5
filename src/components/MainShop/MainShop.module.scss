@@ -1,0 +1,23 @@
+.shopContainer{
+display: flex;
+justify-content: space-evenly;
+margin-top: 2rem;
+}
+
+.shopMenu{
+text-align: center;
+
+    .shopLink{
+        color: rgb(80, 80, 80);
+        text-decoration: none;
+    }
+
+    .shopImg {
+        max-width: 30rem;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+        border-radius: 1rem;
+    }
+}

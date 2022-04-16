@@ -1,3 +1,11 @@
+.comidasLink {
+    margin: auto;
+    text-decoration: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //padding: 1rem;
+}
+
 .comidasContainer {
     display: flex;
     width: 100%;
@@ -7,15 +15,13 @@
     text-align: center;
 }
 
-.foodName {
-padding-bottom: 1rem;
+.comidasName {
+    padding: 0.5rem 0 1rem 0;
+    font-weight: 500;
 }
 
-.foodYummy {
-    padding-top: 1rem;
-}
-
-img{
+.comidasImg{
     height: 20rem;
     width: 20rem;
+    border-radius: 1rem;
 }

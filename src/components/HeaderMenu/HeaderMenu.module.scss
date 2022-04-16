@@ -1,36 +1,75 @@
-header {
-    //background-color: grey;
+.container {
+    background-color: #000;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    //max-height: 7.25rem;
 }
 
-.menuNav {
+.logo{
+    flex: 1;
+    /////////
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+    // img {
+    //     max-width: 8rem;
+    //     width: 100%;
+    //     height: auto;
+    //     display: block;
+    //     margin: auto;
+    // }
+}
+
+.nav {
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none;
-    overflow: hidden;
-    padding: auto;
+    flex: 3;
+    //padding-top: 5rem;
 
-    &Item {
-        float: left;
+    .menuNav{
+        width: 100%;
+
+        li{            
+            display: inline;
+            padding-left: 1rem;
+        }
     }
 
-    &Linke {
-        display: block;
-        color: blue;
-        text-align: center;
-        text-decoration: none;
-        padding: 1.5rem 0.5rem 0 0.5rem;
+    .menuNavItem{
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
     }
 
-}
-
-.menuLeft {
-    //margin-right: auto;
 }
 
 .menuRight {
-    //margin-left: auto;
-    padding-right: 1rem;
+    flex: 3;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    &Items{
+        padding-inline-start: 0;
+        padding-inline-end: 40px;
+    }
+    
+    .menuRightItem{
+        display: inline;
+        padding-right: 1rem;
+        
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
 }

@@ -4,7 +4,6 @@ import { collection, addDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 import styles from "./UploadForm.module.scss";
-import HeaderMenu from "../HeaderMenu/HeaderMenu";
 
 const UploadForm = () => {
 
@@ -48,7 +47,6 @@ const UploadForm = () => {
         }
         setIsLoading(true);
         uploadImage(collectionN, imageUpload.name);
-        console.log('----------', imageUpload);
         // coleccion no puede ser vacia
         // cambiar espacios por _
         setIngrediente('');
@@ -58,11 +56,9 @@ const UploadForm = () => {
         fileRef.current.value = '';
 
     };
-    console.log('>////<', imageUpload);
 
     const handleFileChange = (e) => {
         setImageUpload(e.target.files[0]);
-        console.log('Queseyo');
     };
 
     const handleCollectionChange = (e) => {
@@ -73,12 +69,18 @@ const UploadForm = () => {
         setSelector(e.target.value);
     }
 
+    // const switchSelector = (selector) => {
+    //     switch(selector){
+    //         case "Comidas":
+    //             return <UploadComidas />
+    //          case "Pokemones":
+    //              return <UploadPokemon />
+    //     }
+    // }
+
 
     return (
         <div>
-            <div>
-                <HeaderMenu />
-            </div>
             <form className={styles.formContainer} onSubmit={submitForm}>
                 <label> Que subiras?
                     <select value={selector} onChange={handleSelectChange}>
