@@ -1,0 +1,25 @@
+.mainContainer{
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    margin-bottom: 2rem;
+}
+
+.dataContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(9rem, 1fr));
+
+    //EN MI OTRO MONITOR SE VEN MUY JUNTOS, COMO LO ARREGLO?
+    //grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+    padding: 2rem 4rem 2rem 1rem;
+    border-left: 0.1rem solid lightgray;
+}
+
+.loading{
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}

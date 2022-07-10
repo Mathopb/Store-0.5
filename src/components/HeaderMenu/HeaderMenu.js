@@ -1,10 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import {
     HOME,
-    ADMINUPLOAD
+    SHOP,
+    ADMINUPLOAD,
+    CREATEUSER,
 } from "../../routes/routes";
 import styles from "./HeaderMenu.module.scss";
 //import Logo from '../../assets/images/Logo.png';
+import Cart from '../../assets/images/Cart.png';
 
 const HeaderMenu = () => {
     return (
@@ -14,7 +17,7 @@ const HeaderMenu = () => {
                     <li className={styles.menuNavItem}>
                         <NavLink
                             to={HOME}
-                            style={({ isActive }) =>
+                            className={({ isActive }) =>
                                 isActive ? styles.activeStyle : undefined
                             }
                         >
@@ -23,8 +26,8 @@ const HeaderMenu = () => {
                     </li>
                     <li className={styles.menuNavItem}>
                         <NavLink
-                            to={HOME}
-                            style={({ isActive }) =>
+                            to={SHOP}
+                            className={({ isActive }) =>
                                 isActive ? styles.activeStyle : undefined
                             }
                         >
@@ -33,8 +36,8 @@ const HeaderMenu = () => {
                     </li>
                     <li className={styles.menuNavItem}>
                         <NavLink
-                            to={HOME}
-                            style={({ isActive }) =>
+                            to={"HOME"}
+                            className={({ isActive }) =>
                                 isActive ? styles.activeStyle : undefined
                             }
                         >
@@ -57,8 +60,8 @@ const HeaderMenu = () => {
                 <ul className={styles.menuRightItems}>
                     <li className={styles.menuRightItem}>
                         <NavLink
-                            to={HOME}
-                            style={({ isActive }) =>
+                            to={"HOME"}
+                            className={({ isActive }) =>
                                 isActive ? styles.activeStyle : undefined
                             }
                         >
@@ -67,12 +70,22 @@ const HeaderMenu = () => {
                     </li>
                     <li className={styles.menuRightItem}>
                         <NavLink
-                            to={HOME}
-                            style={({ isActive }) =>
+                            to={CREATEUSER}
+                            className={({ isActive }) =>
                                 isActive ? styles.activeStyle : undefined
                             }
                         >
                             Create Account
+                        </NavLink>
+                    </li>
+                    <li className={styles.menuRightItem}>
+                        <NavLink
+                            to={"HOME"}
+                            className={({ isActive }) =>
+                                isActive ? styles.activeStyle : undefined
+                            }
+                        >
+                            <img src={Cart} alt="" />
                         </NavLink>
                     </li>
                 </ul>

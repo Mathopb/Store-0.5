@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from '../../Firebase/FirebaseConfig';
 import Bebida from "../Bebida/Bebida";
+import useFirebaseData from "../../hooks/request/useFirebaseData";
+
+import { useLocation } from "react-router-dom";
 
 const Bebidas = () => {
     const [bebidas, setBebidas] = useState([]);
+    const { getDataByCollectionName } = useFirebaseData();
+
+    const location = useLocation();
+    console.log(location);
 
     useEffect(() => {
 
+
         const obtenerDatos = async () => {
 
-            const data = await getDocs(collection(db, 'Pokemones'));
-            const bebida = [];
-            data.forEach((documento) => {
-                //console.log(documento.data());
-                bebida.push(documento.data());
-            })
-            setBebidas(bebida);
+            const data = await getDataByCollectionName('Bebidas');
+            setBebidas(data);
 
         }
 

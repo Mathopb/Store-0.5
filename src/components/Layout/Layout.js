@@ -1,32 +1,38 @@
 import { Routes, Route } from "react-router-dom";
-//import MainPage from "../MainPage/MainPage";
+import MainPage from "../MainPage/MainPage";
 import MainShop from "../MainShop/MainShop";
 import UploadForm from "../UploadForm/UploadForm";
 import {
     HOME,
+    SHOP,
     ADMINUPLOAD,
-    COMIDASHOP,
-    BEBIDAS,
-    COMIDAINFO
+    CREATEUSER,
+    ARTICLELIST,
+    ITEMINFO
 } from "../../routes/routes";
-import ListaComidas from "../ListaComidas/ListaComidas";
-import Bebidas from "../Bebidas/Bebidas";
+import CollItemList from "../CollItemList/CollItemList";
 import Comida from "../Comida/Comida";
 import { Fragment } from "react";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import Footer from "../Footer/Footer";
+import CreateUser from "../CreateUser/CreateUser";
 
 const Layout = () => {
     return (
         <Fragment>
             <HeaderMenu />
             <Routes>
-                <Route path={HOME} element={<MainShop />} />
+                <Route path={HOME} element={<MainPage />} />
+                <Route path={SHOP} element={<MainShop />} />
+
+                <Route path={ARTICLELIST} element={<CollItemList />} />
+                <Route path={ITEMINFO} element={<Comida />} />
+
                 <Route path={ADMINUPLOAD} element={<UploadForm />} />
-                <Route path={COMIDASHOP} element={<ListaComidas />} />
-                <Route path={COMIDAINFO} element={<Comida />} />
-                <Route path={BEBIDAS} element={<Bebidas />} />
+                <Route path={CREATEUSER} element={<CreateUser />} />
 
             </Routes>
+            <Footer />
         </Fragment>
     );
 }

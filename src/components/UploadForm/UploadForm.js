@@ -85,7 +85,7 @@ const UploadForm = () => {
                 <label> Que subiras?
                     <select value={selector} onChange={handleSelectChange}>
                         <option value="Comidas"> Comida </option>
-                        <option value="Pokemones"> Pokemon </option>
+                        <option value="Bebidas"> Bebida </option>
                     </select>
                 </label>
                 <input

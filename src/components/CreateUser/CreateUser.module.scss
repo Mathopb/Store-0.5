@@ -1,0 +1,55 @@
+ .mainContainer{
+     padding: 2rem 14rem 4rem 14rem;
+
+     h2{
+         margin: auto;
+         padding-bottom: 2rem;
+     }
+ }
+
+// .formContainer{
+//     margin: auto;
+//     padding: 4rem 15rem;
+//     text-align: center;
+//     border: 0.1rem solid lightgray;
+
+// }
+
+.fullContainer{
+    display: flex;
+    padding: 4rem 0;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid lightgray;
+    flex-direction: column;
+}
+
+.formContainer{
+    max-width: 30rem;
+    width: 100%;
+
+    .error{
+        margin: 0.2rem 0 0.4rem 0;
+        color: #e64646;
+        text-align: center;
+    }
+}
+
+.addInfo{
+    display: flex;
+    margin-bottom: 2rem;
+    //PREGUNTARLE A CHOPI PORQUE AUMENTA EL PADDING CUANDO BAJO EL MARGEN
+    align-items: center;
+
+    .formLabel{
+        flex: 0 0 9.5rem;
+    }
+
+    .formInput{
+        border: 0.1rem solid lightgrey;
+        padding: 1rem;
+        flex: 1;
+    }
+
+    
+}
